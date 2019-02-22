@@ -1,0 +1,22 @@
+*{
+     margin: 0;
+    padding: 0;
+    ul{
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        background:#D8EEF9;
+        li{
+            display:inline-block;
+            width: 120px;
+            height: 44px;
+            line-height: 44px;
+            background:#D8EEF9;
+            a{
+                text-decoration: none;
+                text-align: center;
+                color: black;   
+            }
+        }
+    }
+}

@@ -1,4 +1,6 @@
 import dva from 'dva';
+//全局引用antd样式
+import 'antd/dist/antd.css';
 import './index.css';
 
 // 1. Initialize

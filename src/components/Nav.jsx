@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
-import styles from './Nav.css';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import '../scss/Nav.scss';
+import { Route, Link,withRouter } from "react-router-dom";
 import Index from '../routes/pages/Index.jsx'
 import Dynamic from '../routes/pages/Dynamic.jsx'
 import Open from '../routes/pages/Open.jsx'
@@ -14,10 +14,13 @@ class Nav extends Component {
     super(props)
     this.props=props
   }
+  UNSAFE_componentWillMount(){
+    this.props.history.push('/index');
+  }
   render() {
       return(
         <div>
-           <Router>
+          
               <div>
                 <ul>
                   <li>
@@ -44,7 +47,6 @@ class Nav extends Component {
                 </ul>
 
                 <hr />
-
                 <Route path="/index" component={Index} />
                 <Route path="/denamic" component={Dynamic} />
                 <Route path="/open" component={Open} />
@@ -53,9 +55,9 @@ class Nav extends Component {
                 <Route path="/communication" component={Communication} />
                 <Route path="/flow" component={Flow} />
               </div>
-            </Router>
+   
         </div>
       )
   }
 }
-export default Nav;
+export default withRouter(Nav);

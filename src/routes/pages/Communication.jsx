@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import Lay from '../../components/Lay.jsx'
 
 class communication extends Component {
   constructor(props){
@@ -9,6 +10,7 @@ class communication extends Component {
       return(
         <div>
            communication connect 互动交流
+           <Lay />
         </div>
       )
   }
